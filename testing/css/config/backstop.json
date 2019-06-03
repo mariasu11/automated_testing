@@ -1,0 +1,41 @@
+{
+  "viewports": [
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "http://localhost:4200",
+      "url": "http://localhost:4200",
+      "hideSelectors": [],
+      "removeSelectors": [
+      ],
+      "selectors": [
+        "body",
+        "msd-branches",
+        "msd-mycomponent",
+        "msd-mylibcomponent"
+      ],
+      "readyEvent": null,
+      "delay": 5000,
+      "misMatchThreshold" : 0.1,
+      "onReadyScript": "scenario1.js",
+      "onBeforeScript": null
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "./testing/css/reference",
+    "casper_scripts": "./testing/css/scenarios/",
+    "bitmaps_test": "./dist/test_reports/css/screenshots",
+    "html_report": "./dist/test_reports/css/html_report",
+    "ci_report": "./dist/test_reports/css/ci_report",
+    "compare_data": "./dist/test_reports/css/compare.json"
+  },
+  "engine": "phantomjs",
+  "report": ["CLI", "browser"],
+  "cliExitOnFail": false,
+  "debug": false
+}
